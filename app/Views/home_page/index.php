@@ -1,5 +1,4 @@
 <?= $this->extend('layout/v_template') ?>
-
 <?= $this->section('content') ?>
 
 <div class="content-wrapper bg-white"> 

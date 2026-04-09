@@ -32,6 +32,13 @@
             <p>Contact</p>
           </a>
         </li>
+
+        <li class="nav-item">
+          <a href="<?= base_url('experience') ?>" class="nav-link <?= url_is('experience*') ? 'active' : '' ?>">
+            <i class="nav-icon bi bi-briefcase-fill"></i>
+            <p>Experience</p>
+          </a>
+        </li>
       </ul>
       </nav>
   </div>

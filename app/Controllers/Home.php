@@ -15,4 +15,9 @@ class Home extends BaseController
         // Tambahkan fungsi ini untuk halaman contact
         return view('home_page/contact');
     }
+
+    public function experience()
+    {
+        return view('home_page/experience'); 
+    }
 }
