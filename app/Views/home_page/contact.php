@@ -72,7 +72,7 @@
                                     <i class="bi bi-instagram fs-3 text-danger me-3"></i>
                                     <div>
                                         <h6 class="mb-0 text-bold">Instagram</h6>
-                                        <small class="text-muted">@fahmialamsyah_</small>
+                                        <small class="text-muted">Fahmi Nugroho</small>
                                     </div>
                                 </div>
                             </a>
