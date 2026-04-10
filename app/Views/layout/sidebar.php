@@ -7,23 +7,21 @@
         class="brand-image opacity-75 shadow"
       />
       <span class="brand-text fw-light">Fahmi Alamsyah N</span>
-      </a>
-    </div>
+    </a>
+  </div>
+
   <div class="sidebar-wrapper">
     <nav class="mt-2">
       <ul
         class="nav sidebar-menu flex-column"
         data-lte-toggle="treeview"
         role="navigation"
-        aria-label="Main navigation"
         data-accordion="false"
-        id="navigation"
       >
         <li class="nav-item">
           <a href="<?= base_url('/') ?>" class="nav-link <?= url_is('/') ? 'active' : '' ?>">
             <i class="nav-icon bi bi-house-door-fill"></i>
-            <p>Home Page</p>
-          </a>
+            <p>Home Page</p> </a>
         </li>
 
         <li class="nav-item">
@@ -40,6 +38,6 @@
           </a>
         </li>
       </ul>
-      </nav>
+    </nav>
   </div>
-  </aside>
+</aside>

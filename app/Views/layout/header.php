@@ -197,11 +197,38 @@
             left: 23px;
         }
     }
+
+    /* Efek Fade Smooth untuk Teks Sidebar */
+    .nav-link p, 
+    .brand-text {
+        display: inline-block; /* Biar transisi width & opacity jalan */
+        transition: opacity 0.3s ease, visibility 0.3s ease, width 0.3s ease;
+        opacity: 1;
+        visibility: visible;
+        white-space: nowrap; /* Biar teks nggak turun ke bawah pas menyempit */
+    }
+
+    /* Kondisi pas sidebar lagi sembunyi (collapsed) */
+    .sidebar-collapse .nav-link p,
+    .sidebar-collapse .brand-text {
+        opacity: 0;
+        visibility: hidden;
+        width: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Biar bener-bener bersih pas ngilang */
+    }
+
+    /* Supaya ikon tetep di tengah pas mode mini */
+    .sidebar-mini.sidebar-collapse .nav-link {
+        text-align: center;
+    }
+
     </style>
   </head>
   <!--end::Head-->
   <!--begin::Body-->
-  <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+  <body class="layout-fixed sidebar-expand-lg sidebar-mini bg-body-tertiary">
     <!--begin::App Wrapper-->
     <div class="app-wrapper">
       <!--begin::Header-->

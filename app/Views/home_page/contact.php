@@ -6,7 +6,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
-                <h3 class="mb-0">Contact Me</h3>
+                <h3 class="mb-0 text-bold" style="color: #333;"><u>Contact Me</u></h3>
             </div>
         </div>
     </div>
@@ -16,63 +16,83 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-7">
-                <div class="card card-primary card-outline">
+                <div class="card card-primary card-outline shadow-sm">
                     <div class="card-header">
-                        <h3 class="card-title">Send a Message</h3>
+                        <h3 class="card-title text-bold"><i class="bi bi-chat-dots-fill me-2"></i>Send a Message</h3>
                     </div>
                     <div class="card-body">
                         <form action="#" method="post">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label text-bold">Name</label>
+                                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label text-bold">Email</label>
+                                    <input type="email" id="email" class="form-control" placeholder="Email Address" required>
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" id="email" class="form-control" placeholder="Email Address" required>
+                                <label for="message" class="form-label text-bold">Message</label>
+                                <textarea id="message" class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
                             </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea id="message" class="form-control" rows="4" placeholder="Write your message here..."></textarea>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-primary px-4">
+                                    <i class="bi bi-send-fill me-1"></i> Send Message
+                                </button>
                             </div>
-                            <button type="submit" class="btn btn-primary">
-                                <i class="bi bi-send-fill me-1"></i> Submit
-                            </button>
                         </form>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-5">
-                <div class="card">
+                <div class="card card-outline card-info shadow-sm">
                     <div class="card-header">
-                        <h3 class="card-title">Connect with Me</h3>
+                        <h3 class="card-title text-bold"><i class="bi bi-info-circle-fill me-2"></i>Connect with Me</h3>
                     </div>
                     <div class="card-body p-0">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <i class="bi bi-instagram text-primary me-2"></i>
-                                <strong>Instagram:</strong> <br>
-                                <span class="text-muted">Fahmi Nugroho</span>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="bi bi-linkedin text-primary me-2"></i>
-                                <strong>LinkedIn:</strong> <br>
-                                <span class="text-muted">Fahmi .A. Nugroho</span>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="bi bi-envelope-fill text-primary me-2"></i>
-                                <strong>Email:</strong> <br>
-                                <span class="text-muted">alamsyahfahmi99@gmail.com</span>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="bi bi-geo-alt-fill text-danger me-2"></i>
-                                <strong>Location:</strong> <br>
-                                <span class="text-muted">West Java, Indonesia</span>
-                            </li>
-                        </ul>
+                        <div class="list-group list-group-flush">
+                            <a href="https://instagram.com/fahmialamsyah_" target="_blank" class="list-group-item list-group-item-action py-3">
+                                <div class="d-flex w-100 align-items-center">
+                                    <i class="bi bi-instagram fs-3 text-danger me-3"></i>
+                                    <div>
+                                        <h6 class="mb-0 text-bold">Instagram</h6>
+                                        <small class="text-muted">@fahmialamsyah_</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://linkedin.com/in/fahmialamsyahn" target="_blank" class="list-group-item list-group-item-action py-3">
+                                <div class="d-flex w-100 align-items-center">
+                                    <i class="bi bi-linkedin fs-3 text-primary me-3"></i>
+                                    <div>
+                                        <h6 class="mb-0 text-bold">LinkedIn</h6>
+                                        <small class="text-muted">Fahmi Alamsyah Nugroho</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="list-group-item py-3">
+                                <div class="d-flex w-100 align-items-center">
+                                    <i class="bi bi-envelope-at-fill fs-3 text-warning me-3"></i>
+                                    <div>
+                                        <h6 class="mb-0 text-bold">Email</h6>
+                                        <small class="text-muted">alamsyahfahmi99@gmail.com</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item py-3">
+                                <div class="d-flex w-100 align-items-center">
+                                    <i class="bi bi-geo-alt-fill fs-3 text-success me-3"></i>
+                                    <div>
+                                        <h6 class="mb-0 text-bold">Location</h6>
+                                        <small class="text-muted">Depok / BSD, West Java, Indonesia</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-footer text-center">
-                        <p class="small text-muted mb-0">You can contact me!</p>
+                    <div class="card-footer text-center bg-light">
+                        <small class="text-muted font-italic">Feel free to reach out for collaboration or inquiries!</small>
                     </div>
                 </div>
             </div>
