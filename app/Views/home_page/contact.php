@@ -16,25 +16,39 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-7">
+                <?php if (session()->getFlashdata('success')) : ?>
+                    <div class="alert alert-success alert-dismissible fade show border-0 shadow-sm" role="alert">
+                        <i class="bi bi-check-circle-fill me-2"></i> <?= session()->getFlashdata('success') ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (session()->getFlashdata('error')) : ?>
+                    <div class="alert alert-danger alert-dismissible fade show border-0 shadow-sm" role="alert">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i> <?= session()->getFlashdata('error') ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php endif; ?>
+
                 <div class="card card-primary card-outline shadow-sm">
                     <div class="card-header">
                         <h3 class="card-title text-bold"><i class="bi bi-chat-dots-fill me-2"></i>Send a Message</h3>
                     </div>
                     <div class="card-body">
-                        <form action="#" method="post">
-                            <div class="row">
+                        <form action="<?= base_url('home/sendEmail') ?>" method="post">
+                            <?= csrf_field() ?> <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="name" class="form-label text-bold">Name</label>
-                                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="email" class="form-label text-bold">Email</label>
-                                    <input type="email" id="email" class="form-control" placeholder="Email Address" required>
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Email Address" required>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label text-bold">Message</label>
-                                <textarea id="message" class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+                                <textarea name="message" id="message" class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
                             </div>
                             <div class="text-end">
                                 <button type="submit" class="btn btn-primary px-4">
@@ -80,19 +94,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="list-group-item py-3">
-                                <div class="d-flex w-100 align-items-center">
-                                    <i class="bi bi-geo-alt-fill fs-3 text-success me-3"></i>
-                                    <div>
-                                        <h6 class="mb-0 text-bold">Location</h6>
-                                        <small class="text-muted">Depok / BSD, West Java, Indonesia</small>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                    </div>
-                    <div class="card-footer text-center bg-light">
-                        <small class="text-muted font-italic">Feel free to reach out for collaboration or inquiries!</small>
                     </div>
                 </div>
             </div>

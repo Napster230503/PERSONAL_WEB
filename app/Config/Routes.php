@@ -8,3 +8,4 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('contact', 'Home::contact');
 $routes->get('experience', 'Home::experience');
+$routes->post('home/sendEmail', 'Home::sendEmail');
