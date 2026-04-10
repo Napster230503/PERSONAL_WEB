@@ -48,8 +48,8 @@
                 <p class="timeline-desc-text">Job Description:</p>
                 <ul class="timeline-desc-text">
                     <li>
-                        Website portal developemnt  in accordance with the Functional Specification (FUNSPEC) 
-                        provide using PHP and CodeIgniter 3 framework.
+                        Website portal development  in accordance with the Functional Specification (FUNSPEC) 
+                        provided using PHP and CodeIgniter 3 framework.
                     </li>
                     <li>
                         Collaborate with user to gather project requirements.
@@ -84,8 +84,8 @@
                 <p class="timeline-desc-text">Job Description:</p>
                 <ul class="timeline-desc-text">
                     <li>
-                        Presenting and promoting the CCIT Profesional program of the Faculti of Engineering,
-                        University of Indonesia to selected high shcools throughout Indonesia.
+                        Presenting and promoting the CCIT Profesional program of the Faculty of Engineering,
+                        University of Indonesia to selected high schools throughout Indonesia.
                     </li>
                 </ul>
             </div>
