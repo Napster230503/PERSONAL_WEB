@@ -37,6 +37,29 @@
             <p>Experience</p>
           </a>
         </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link <?= url_is('admin*') ? 'active' : '' ?>">
+            <i class="nav-icon bi bi-shield-lock-fill"></i>
+            <p>
+              Admin Side
+              <i class="nav-arrow bi bi-chevron-right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="<?= base_url('admin/experience') ?>" class="nav-link <?= url_is('admin/experience*') ? 'active' : '' ?>">
+                <i class="nav-icon bi bi-circle"></i>
+                <p>Admin Experience</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon bi bi-circle"></i>
+                <p>Admin Portfolio (Soon)</p>
+              </a>
+            </li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </div>

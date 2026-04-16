@@ -9,3 +9,9 @@ $routes->get('/', 'Home::index');
 $routes->get('contact', 'Home::contact');
 $routes->get('experience', 'Home::experience');
 $routes->post('home/sendEmail', 'Home::sendEmail');
+$routes->group('admin', ['filter' => 'auth'], function($routes) {
+    $routes->get('experience', 'admin_side\admin_experience\controller_experience::index');
+});
+$routes->get('login', 'Auth::index');
+$routes->post('auth/login_process', 'Auth::login_process');
+$routes->get('logout', 'Auth::logout');

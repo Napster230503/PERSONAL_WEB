@@ -1,0 +1,152 @@
+ERROR - 2026-04-16 03:36:21 --> Error connecting to the database: mysqli_sql_exception: Connections using insecure transport are prohibited. See https://docs.pingcap.com/tidbcloud/secure-connections-to-serverless-tier-clusters in C:\xampp\htdocs\PERSONAL_WEB\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\PERSONAL_WEB\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('gateway01.ap-so...', '21Q2Uybn6AaQzXR...', Object(SensitiveParameterValue), 'test', 4000, '', 0)
+#1 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\PERSONAL_WEB\system\Commands\Database\ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\PERSONAL_WEB\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\ShowTableInfo->run(Array)
+#6 C:\xampp\htdocs\PERSONAL_WEB\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:table', Array)
+#7 C:\xampp\htdocs\PERSONAL_WEB\system\Boot.php(442): CodeIgniter\CLI\Console->run()
+#8 C:\xampp\htdocs\PERSONAL_WEB\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#9 C:\xampp\htdocs\PERSONAL_WEB\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connections using insecure transport are prohibited. See https://docs.pingcap.com/tidbcloud/secure-connections-to-serverless-tier-clusters in C:\xampp\htdocs\PERSONAL_WEB\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\PERSONAL_WEB\system\Commands\Database\ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\PERSONAL_WEB\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\ShowTableInfo->run(Array)
+#5 C:\xampp\htdocs\PERSONAL_WEB\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:table', Array)
+#6 C:\xampp\htdocs\PERSONAL_WEB\system\Boot.php(442): CodeIgniter\CLI\Console->run()
+#7 C:\xampp\htdocs\PERSONAL_WEB\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#8 C:\xampp\htdocs\PERSONAL_WEB\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#9 {main}
+CRITICAL - 2026-04-16 03:36:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Connections using insecure transport are prohibited. See https://docs.pingcap.com/tidbcloud/secure-connections-to-serverless-tier-clusters
+[Method: CLI, Route: db:table]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FROM `test`')
+ 3 SYSTEMPATH\Commands\Database\ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+ 4 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\ShowTableInfo->run([])
+ 5 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:table', [])
+ 6 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+ 7 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 8 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-04-16 03:36:54 --> Error connecting to the database: mysqli_sql_exception: Connections using insecure transport are prohibited. See https://docs.pingcap.com/tidbcloud/secure-connections-to-serverless-tier-clusters in C:\xampp\htdocs\PERSONAL_WEB\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\PERSONAL_WEB\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('gateway01.ap-so...', '21Q2Uybn6AaQzXR...', Object(SensitiveParameterValue), 'test', 4000, '', 0)
+#1 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\PERSONAL_WEB\system\Commands\Database\ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\PERSONAL_WEB\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\ShowTableInfo->run(Array)
+#6 C:\xampp\htdocs\PERSONAL_WEB\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:table', Array)
+#7 C:\xampp\htdocs\PERSONAL_WEB\system\Boot.php(442): CodeIgniter\CLI\Console->run()
+#8 C:\xampp\htdocs\PERSONAL_WEB\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#9 C:\xampp\htdocs\PERSONAL_WEB\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connections using insecure transport are prohibited. See https://docs.pingcap.com/tidbcloud/secure-connections-to-serverless-tier-clusters in C:\xampp\htdocs\PERSONAL_WEB\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\PERSONAL_WEB\system\Commands\Database\ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\PERSONAL_WEB\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\ShowTableInfo->run(Array)
+#5 C:\xampp\htdocs\PERSONAL_WEB\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:table', Array)
+#6 C:\xampp\htdocs\PERSONAL_WEB\system\Boot.php(442): CodeIgniter\CLI\Console->run()
+#7 C:\xampp\htdocs\PERSONAL_WEB\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#8 C:\xampp\htdocs\PERSONAL_WEB\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#9 {main}
+CRITICAL - 2026-04-16 03:36:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Connections using insecure transport are prohibited. See https://docs.pingcap.com/tidbcloud/secure-connections-to-serverless-tier-clusters
+[Method: CLI, Route: db:table]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FROM `test`')
+ 3 SYSTEMPATH\Commands\Database\ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+ 4 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\ShowTableInfo->run([])
+ 5 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:table', [])
+ 6 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+ 7 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 8 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-04-16 03:38:57 --> Error connecting to the database: mysqli_sql_exception: Connections using insecure transport are prohibited. See https://docs.pingcap.com/tidbcloud/secure-connections-to-serverless-tier-clusters in C:\xampp\htdocs\PERSONAL_WEB\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\PERSONAL_WEB\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('gateway01.ap-so...', '21Q2Uybn6AaQzXR...', Object(SensitiveParameterValue), 'test', 4000, '', 0)
+#1 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\PERSONAL_WEB\system\Commands\Database\ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\PERSONAL_WEB\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\ShowTableInfo->run(Array)
+#6 C:\xampp\htdocs\PERSONAL_WEB\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:table', Array)
+#7 C:\xampp\htdocs\PERSONAL_WEB\system\Boot.php(442): CodeIgniter\CLI\Console->run()
+#8 C:\xampp\htdocs\PERSONAL_WEB\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#9 C:\xampp\htdocs\PERSONAL_WEB\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connections using insecure transport are prohibited. See https://docs.pingcap.com/tidbcloud/secure-connections-to-serverless-tier-clusters in C:\xampp\htdocs\PERSONAL_WEB\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\PERSONAL_WEB\system\Commands\Database\ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\PERSONAL_WEB\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\ShowTableInfo->run(Array)
+#5 C:\xampp\htdocs\PERSONAL_WEB\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:table', Array)
+#6 C:\xampp\htdocs\PERSONAL_WEB\system\Boot.php(442): CodeIgniter\CLI\Console->run()
+#7 C:\xampp\htdocs\PERSONAL_WEB\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#8 C:\xampp\htdocs\PERSONAL_WEB\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#9 {main}
+CRITICAL - 2026-04-16 03:38:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Connections using insecure transport are prohibited. See https://docs.pingcap.com/tidbcloud/secure-connections-to-serverless-tier-clusters
+[Method: CLI, Route: db:table]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FROM `test`')
+ 3 SYSTEMPATH\Commands\Database\ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+ 4 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\ShowTableInfo->run([])
+ 5 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:table', [])
+ 6 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+ 7 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 8 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-04-16 03:41:53 --> Error connecting to the database: mysqli_sql_exception: Connections using insecure transport are prohibited. See https://docs.pingcap.com/tidbcloud/secure-connections-to-serverless-tier-clusters in C:\xampp\htdocs\PERSONAL_WEB\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\PERSONAL_WEB\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('gateway01.ap-so...', '21Q2Uybn6AaQzXR...', Object(SensitiveParameterValue), 'test', 4000, '', 0)
+#1 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\PERSONAL_WEB\system\Commands\Database\ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\PERSONAL_WEB\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\ShowTableInfo->run(Array)
+#6 C:\xampp\htdocs\PERSONAL_WEB\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:table', Array)
+#7 C:\xampp\htdocs\PERSONAL_WEB\system\Boot.php(442): CodeIgniter\CLI\Console->run()
+#8 C:\xampp\htdocs\PERSONAL_WEB\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#9 C:\xampp\htdocs\PERSONAL_WEB\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connections using insecure transport are prohibited. See https://docs.pingcap.com/tidbcloud/secure-connections-to-serverless-tier-clusters in C:\xampp\htdocs\PERSONAL_WEB\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\PERSONAL_WEB\system\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\PERSONAL_WEB\system\Commands\Database\ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\PERSONAL_WEB\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\ShowTableInfo->run(Array)
+#5 C:\xampp\htdocs\PERSONAL_WEB\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:table', Array)
+#6 C:\xampp\htdocs\PERSONAL_WEB\system\Boot.php(442): CodeIgniter\CLI\Console->run()
+#7 C:\xampp\htdocs\PERSONAL_WEB\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#8 C:\xampp\htdocs\PERSONAL_WEB\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#9 {main}
+CRITICAL - 2026-04-16 03:41:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Connections using insecure transport are prohibited. See https://docs.pingcap.com/tidbcloud/secure-connections-to-serverless-tier-clusters
+[Method: CLI, Route: db:table]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FROM `test`')
+ 3 SYSTEMPATH\Commands\Database\ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+ 4 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\ShowTableInfo->run([])
+ 5 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:table', [])
+ 6 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+ 7 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 8 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
