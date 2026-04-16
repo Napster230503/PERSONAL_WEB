@@ -1,0 +1,8 @@
+# Jangan push file konfigurasi rahasia
+.env
+/vendor/
+/writable/
+
+# Jangan push file sampah sistem
+Thumbs.db
+.DS_Store
