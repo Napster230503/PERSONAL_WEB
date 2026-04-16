@@ -15,3 +15,4 @@ $routes->group('admin', ['filter' => 'auth'], function($routes) {
 $routes->get('login', 'Auth::index');
 $routes->post('auth/login_process', 'Auth::login_process');
 $routes->get('logout', 'Auth::logout');
+$routes->get('auth/save_register', 'Auth::save_register'); //http://localhost/PERSONAL_WEB/public/auth/save_register untuk cek user sudah masuk ke cloud
