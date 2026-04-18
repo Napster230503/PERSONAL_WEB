@@ -78,6 +78,8 @@
       crossorigin="anonymous"
     />
 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+
     <style>
     /* CSS UNTUK TIMELINE MILESTONES CUSTOM */
     .custom-timeline {

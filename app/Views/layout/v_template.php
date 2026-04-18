@@ -4,7 +4,7 @@
 
 <main class="app-main">
     <div class="app-content-header">
-        </div>
+    </div>
     <div class="app-content">
         <div class="container-fluid">
             <?= $this->renderSection('content') ?>
@@ -13,3 +13,5 @@
 </main>
 
 <?= view('layout/footer') ?>
+
+<?= $this->renderSection('script') ?>

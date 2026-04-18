@@ -11,6 +11,7 @@ $routes->get('experience', 'Home::experience');
 $routes->post('home/sendEmail', 'Home::sendEmail');
 $routes->group('admin', ['filter' => 'auth'], function($routes) {
     $routes->get('experience', 'admin_side\admin_experience\controller_experience::index');
+    $routes->post('experience/save', 'admin_side\admin_experience\controller_experience::save'); //save experience
 });
 $routes->get('login', 'Auth::index');
 $routes->post('auth/login_process', 'Auth::login_process');
