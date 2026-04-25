@@ -8,6 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('contact', 'Home::contact');
 $routes->get('experience', 'Home::experience');
+$routes->get('test', 'Home::test');
 $routes->post('home/sendEmail', 'Home::sendEmail');
 $routes->group('admin', ['filter' => 'auth'], function($routes) {
     $routes->get('experience', 'admin_side\admin_experience\controller_experience::index');

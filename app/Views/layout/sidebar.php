@@ -37,6 +37,14 @@
             <p>Experience</p>
           </a>
         </li>
+
+      <li class="nav-item">
+        <a href="<?= base_url('test') ?>" class="nav-link <?= url_is('test*') ? 'active' : '' ?>">
+          <i class="nav-icon fas fa-vial"></i> 
+          <p>Test</p>
+        </a>
+      </li>
+
         <li class="nav-item">
           <a href="#" class="nav-link <?= url_is('admin*') ? 'active' : '' ?>">
             <i class="nav-icon bi bi-shield-lock-fill"></i>

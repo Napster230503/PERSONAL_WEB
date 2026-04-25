@@ -21,6 +21,12 @@ class Home extends BaseController
         return view('home_page/experience'); 
     }
 
+    public function test()
+    {
+        // Tambahkan nama folder 'home_page/' sebelum nama file
+        return view('home_page/test');
+    }
+
     public function sendEmail()
     {
         $email = \Config\Services::email();
