@@ -33,16 +33,21 @@
                                         <td><?= $exp['jabatan'] ?></td>
                                         <td><?= $exp['deskripsi'] ?></td>
                                         <td class="text-center">
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
-                                                    <i class="fas fa-cog"></i>
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#"><i class="fas fa-edit mr-2"></i> Edit</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item text-danger" href="#"><i class="fas fa-trash mr-2"></i> Delete</a>
-                                                </div>
-                                            </div>
+                                            <select class="form-control form-control-sm select-action" onchange="handleAction(this)">
+                                                <option value="" selected disabled>-- Action --</option>
+                                                <option value="edit" 
+                                                        data-id="<?= $exp['id_experience'] ?>"
+                                                        data-mulai="<?= $exp['tgl_mulai'] ?>"
+                                                        data-akhir="<?= $exp['tgl_akhir'] ?>"
+                                                        data-instansi="<?= $exp['nama_instansi'] ?>"
+                                                        data-jabatan="<?= $exp['jabatan'] ?>"
+                                                        data-deskripsi="<?= $exp['deskripsi'] ?>">
+                                                    📝 Edit Data
+                                                </option>
+                                                <option value="<?= base_url('admin/experience/delete/' . $exp['id_experience']) ?>" class="text-danger">
+                                                    🗑️ Delete Data
+                                                </option>
+                                            </select>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -64,39 +69,45 @@
                 <h3 class="card-title">Form Experience & Achievement</h3>
             </div>
             <div class="card-body">
-                <form action="<?= base_url('admin/experience/save') ?>" method="post">
+                <form action="<?= base_url('admin/experience/save') ?>" method="post" id="formExperience">
+                    <?= csrf_field() ?> <input type="hidden" name="id_experience" id="id_experience"> 
+
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Tanggal Awal</label>
-                                <input type="text" class="form-control" name="tgl_mulai" placeholder="Contoh: Mar 2025">
+                                <input type="text" class="form-control" name="tgl_mulai" id="tgl_mulai" placeholder="Contoh: Mar 2025">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Tanggal Akhir</label>
-                                <input type="text" class="form-control" name="tgl_akhir" placeholder="Contoh: Apr 2026 atau Present">
+                                <input type="text" class="form-control" name="tgl_akhir" id="tgl_akhir" placeholder="Contoh: Apr 2026 atau Present">
                             </div>
                         </div>
                     </div>
+
                     <div class="form-group">
                         <label>Nama Instansi / Perusahaan</label>
-                        <input type="text" class="form-control" name="nama_instansi" placeholder="Contoh: Universitas / PT X">
+                        <input type="text" class="form-control" name="nama_instansi" id="nama_instansi" placeholder="Contoh: Universitas / PT X">
                     </div>
+
                     <div class="form-group">
                         <label>Jabatan / Posisi</label>
-                        <input type="text" class="form-control" name="jabatan" placeholder="Contoh: Web Developer">
+                        <input type="text" class="form-control" name="jabatan" id="jabatan" placeholder="Contoh: Web Developer">
                     </div>
+
                     <div class="form-group">
                         <label>Deskripsi Tugas</label>
-                        <textarea class="form-control" name="deskripsi" rows="3" placeholder="Jelaskan apa yang Anda kerjakan..."></textarea>
+                        <textarea class="form-control" name="deskripsi" id="deskripsi" rows="3" placeholder="Jelaskan apa yang Anda kerjakan..."></textarea>
                     </div>
+
                     <div class="mt-3">
-                        <button type="reset" class="btn btn-danger">Reset</button>
-                        <button type="submit" class="btn btn-success float-right">Submit</button>
+                        <button type="reset" class="btn btn-danger" onclick="resetForm()">Reset</button>
+                        <button type="submit" class="btn btn-success float-right" id="btnSubmit">Submit</button>
                     </div>
                 </form>
-            </div>
+                </div>
         </div>
     </div>
 </div>

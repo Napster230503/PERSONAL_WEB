@@ -215,6 +215,10 @@
         text-align: center;
     }
 
+    .table-responsive {
+        overflow: inherit !important;
+    }
+
     </style>
   </head>
   <!--end::Head-->
